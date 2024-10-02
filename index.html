@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preloader with Voting</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9; /* Light page background */
+        }
+
+        .preloader {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: transparent;
+        }
+
+        .loader {
+            border: 16px solid #f3f3f3;
+            border-top: 16px solid #3498db;
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            animation: spin 2s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .voting {
+            display: none;
+            text-align: center;
+        }
+
+        .voting h2 {
+            font-size: 26px;
+            color: #333;
+        }
+
+        #text {
+            font-size: 26px;
+            color: #333;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: .15em solid #333;
+            width: 0;
+            animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+        }
+
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent; }
+            50% { border-color: #333; }
+        }
+
+        .voting button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+        }
+
+        .voting button:hover {
+            background-color: #45a049;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="preloader" id="preloader">
+    <div class="loader"></div>
+</div>
+
+<div class="voting" id="voting">
+    <h2 id="text">Welcome to the writing game 2024</h2>
+    <a href="voting.html">
+    <button id="voteButton" style="display:none;">Continue</button>
+    </a>
+</div>
+
+<script>
+    // Function to switch from preloader to voting and type the text
+    setTimeout(() => {
+        document.getElementById('preloader').style.display = 'none';
+        document.getElementById('voting').style.display = 'block';
+
+        // Delay the button until the typing animation is done
+        setTimeout(() => {
+            document.getElementById('voteButton').style.display = 'inline-block';
+        }, 4000); // Button appears after typing finishes (3.5s typing + 0.5s buffer)
+    }, 10000); // 10 seconds
+
+    // Event listener for the vote button
+    document.getElementById('voteButton').addEventListener('click', () => {
+        alert('Thank you for continuing!');
+        // You can redirect the user here or add further logic
+    });
+</script>
+
+</body>
+</html>

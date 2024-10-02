@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-icon" onclick="toggleNavbar()">☰</div>
+        <div class="navbar-links">
+            <a href="#">Top Ten Voters</a>
+            <a href="instruction.html">Help</a>
+            <a href="#">Feedback</a>
+            <span class="cancel-icon" onclick="toggleNavbar()">✖</span>
+        </div>
+        <div class="search-container">
+            <input type="text" id="search-bar" placeholder="Search contestants...">
+        </div>
+        <div class="toggle-dark-mode" onclick="toggleDarkMode()">🌓</div>
+    </nav>
+
+    <!-- Contestants Section -->
+    <div class="contestants-container">
+        <!-- Generate 50 contestant cards -->
+        <div class="contestant-card" id="contestant-1">
+            <img src="images/contestant 1.jpg" alt="Contestant 1" class="contestant-image">
+            <h3>Amarachi Rejoice</h3>
+            <p>ID: 001</p>
+            <button class="vote-button" onclick="showVote(1)">Vote</button>
+        </div>
+        <div class="contestant-card" id="contestant-2">
+            <img src="images/contestant 2.jpg" alt="Contestant 2" class="contestant-image">
+            <h3>Merciful Omoba</h3>
+            <p>ID: 002</p>
+            <button class="vote-button" onclick="showVote(2)">Vote</button>
+        </div>
+        <!-- Repeat this block for all contestants up to Contestant 50 -->
+        <div class="contestant-card" id="contestant-3">
+            <img src="images/contestant 3.jpg" alt="Contestant 3" class="contestant-image">
+            <h3>Favour Sorochi</h3>
+            <p>ID: 003</p>
+            <button class="vote-button" onclick="showVote(2)">Vote</button>
+        </div>
+        <div class="contestant-card" id="contestant-4">
+            <img src="images/contestant 4.jpg" alt="Contestant 4" class="contestant-image">
+            <h3>Evinemi Lydia</h3>
+            <p>ID: 004</p>
+            <button class="vote-button" onclick="showVote(2)">Vote</button>
+        </div>
+        <div class="contestant-card" id="contestant-5">
+            <img src="images/contestant 5.jpg" alt="Contestant 5" class="contestant-image">
+            <h3>Che Housia</h3>
+            <p>ID: 005</p>
+            <button class="vote-button" onclick="showVote(2)">Vote</button>
+        </div>
+        <div class="contestant-card" id="contestant-3">
+            <img src="images/contestant 6.jpg" alt="Contestant 6" class="contestant-image">
+            <h3>Deborah Chizaram</h3>
+            <p>ID: 006</p>
+            <button class="vote-button" onclick="showVote(2)">Vote</button>
+        </div>
+        <div class="contestant-card" id="contestant-3">
+            <img src="images/contestant 7.jpg" alt="Contestant 7" class="contestant-image">
+            <h3>Amadi-Lawrence</h3>
+            <p>ID: 007</p>
+            <button class="vote-button" onclick="showVote(2)">Vote</button>
+        </div>
+        <div class="contestant-card" id="contestant-3">
+            <img src="images/contestant 8.jpg" alt="Contestant 8" class="contestant-image">
+            <h3>Wokpe Joy</h3>
+            <p>ID: 008</p>
+            <button class="vote-button" onclick="showVote(2)">Vote</button>
+        </div>
+        <div class="contestant-card" id="contestant-3">
+            <img src="images/contestant 9.jpg" alt="Contestant 9" class="contestant-image">
+            <h3>Isaac Ruth</h3>
+            <p>ID: 009</p>
+            <button class="vote-button" onclick="showVote(2)">Vote</button>
+        </div>
+        <div class="contestant-card" id="contestant-3">
+            <img src="images/contestant 10.jpg" alt="Contestant 7" class="contestant-image">
+            <h3>Arowele Adesola</h3>
+            <p>ID: 010</p>
+            <button class="vote-button" onclick="showVote(2)">Vote</button>
+        </div>
+        <div class="contestant-card" id="contestant-3">
+            <img src="images/contestant 11.jpg" alt="Contestant 7" class="contestant-image">
+            <h3>Okunade Toluwanimi</h3>
+            <p>ID: 011</p>
+            <button class="vote-button" onclick="showVote(2)">Vote</button>
+        </div>
+        <div class="contestant-card" id="contestant-3">
+            <img src="images/contestant 12.jpg" alt="Contestant 7" class="contestant-image">
+            <h3>Jessika Onyekwuluje</h3>
+            <p>ID: 012</p>
+            <button class="vote-button" onclick="showVote(2)">Vote</button>
+        </div>
+        <div class="contestant-card" id="contestant-3">
+            <img src="images/contestant 13.jpg" alt="Contestant 7" class="contestant-image">
+            <h3>Adeife Treasure</h3>
+            <p>ID: 013</p>
+            <button class="vote-button" onclick="showVote(2)">Vote</button>
+        </div>
+        <div class="contestant-card" id="contestant-3">
+            <img src="images/contestant 14.jpg" alt="Contestant 7" class="contestant-image">
+            <h3>Joseph Treasure</h3>
+            <p>ID: 014</p>
+            <button class="vote-button" onclick="showVote(2)">Vote</button>
+        </div>
+        <div class="contestant-card" id="contestant-3">
+            <img src="images/contestant 15.jpg" alt="Contestant 7" class="contestant-image">
+            <h3> Abaenowa Chidinma </h3>
+            <p>ID: 015</p>
+            <button class="vote-button" onclick="showVote(2)">Vote</button>
+        </div>
+        <div class="contestant-card" id="contestant-3">
+            <img src="images/contestant 16.jpg" alt="Contestant 7" class="contestant-image">
+            <h3>Omotosho Austin</h3>
+            <p>ID: 016</p>
+            <button class="vote-button" onclick="showVote(2)">Vote</button>
+        </div>
+        <div class="contestant-card" id="contestant-3">
+            <img src="images/contestant 17.jpg" alt="Contestant 7" class="contestant-image">
+            <h3>Stella Ene</h3>
+            <p>ID: 017</p>
+            <button class="vote-button" onclick="showVote(2)">Vote</button>
+        </div>
+        <div class="contestant-card" id="contestant-3">
+            <img src="images/contestant 18.jpg" alt="Contestant 7" class="contestant-image">
+            <h3>Ansalam Victory</h3>
+            <p>ID: 018</p>
+            <button class="vote-button" onclick="showVote(2)">Vote</button>
+        </div>
+        <div class="contestant-card" id="contestant-3">
+            <img src="images/contestant 19.jpg" alt="Contestant 7" class="contestant-image">
+            <h3>Ayeni Yeslord</h3>
+            <p>ID: 019</p>
+            <button class="vote-button" onclick="showVote(2)">Vote</button>
+        </div>
+        <div class="contestant-card" id="contestant-3">
+            <img src="images/contestant 20.jpg" alt="Contestant 7" class="contestant-image">
+            <h3>Rhoda Audu</h3>
+            <p>ID: 020</p>
+            <button class="vote-button" onclick="showVote(2)">Vote</button>
+        </div>
+        <div class="contestant-card" id="contestant-3">
+            <img src="images/contestant 21.jpg" alt="Contestant 7" class="contestant-image">
+            <h3>Ozakpolor Precious</h3>
+            <p>ID: 021</p>
+            <button class="vote-button" onclick="showVote(2)">Vote</button>
+        </div>
+        <div class="contestant-card" id="contestant-3">
+            <img src="images/contestant 22.jpg" alt="Contestant 7" class="contestant-image">
+            <h3>Stephen Favour</h3>
+            <p>ID: 022</p>
+            <button class="vote-button" onclick="showVote(2)">Vote</button>
+        </div>
+        <div class="contestant-card" id="contestant-3">
+            <img src="images/contestant 23.jpg" alt="Contestant 7" class="contestant-image">
+            <h3>Okechukwu Favour</h3>
+            <p>ID: 023</p>
+            <button class="vote-button" onclick="showVote(2)">Vote</button>
+        </div>
+        <div class="contestant-card" id="contestant-3">
+            <img src="images/contestant 24.jpg" alt="Contestant 7" class="contestant-image">
+            <h3>Olajide Damilola</h3>
+            <p>ID: 024</p>
+            <button class="vote-button" onclick="showVote(2)">Vote</button>
+        </div>
+        <div class="contestant-card" id="contestant-3">
+            <img src="images/contestant 25.jpg" alt="Contestant 7" class="contestant-image">
+            <h3>John Ogbu</h3>
+            <p>ID: 025</p>
+            <button class="vote-button" onclick="showVote(2)">Vote</button>
+        </div>
+        <div class="contestant-card" id="contestant-3">
+            <img src="images/contestant 26.jpg" alt="Contestant 7" class="contestant-image">
+            <h3>Wisdom Etim</h3>
+            <p>ID: 026</p>
+            <button class="vote-button" onclick="showVote(2)">Vote</button>
+        </div>
+        <div class="contestant-card" id="contestant-3">
+            <img src="images/contestant 27.jpg" alt="Contestant 7" class="contestant-image">
+            <h3>Peace Amos</h3>
+            <p>ID: 027</p>
+            <button class="vote-button" onclick="showVote(2)">Vote</button>
+        </div>
+        <div class="contestant-card" id="contestant-3">
+            <img src="images/contestant 28.jpg" alt="Contestant 7" class="contestant-image">
+            <h3>Alex Juliet</h3>
+            <p>ID: 028</p>
+            <button class="vote-button" onclick="showVote(2)">Vote</button>
+        </div>
+        <div class="contestant-card" id="contestant-3">
+            <img src="images/contestant 29.jpg" alt="Contestant 7" class="contestant-image">
+            <h3>Okolie Oluebube</h3>
+            <p>ID: 029</p>
+            <button class="vote-button" onclick="showVote(2)">Vote</button>
+        </div>
+        <div class="contestant-card" id="contestant-3">
+            <img src="images/contestant 30.jpg" alt="Contestant 7" class="contestant-image">
+            <h3>Chukwumezie Favour</h3>
+            <p>ID: 030</p>
+            <button class="vote-button" onclick="showVote(2)">Vote</button>
+        </div>
+        <div class="contestant-card" id="contestant-3">
+            <img src="images/contestant 31.jpg" alt="Contestant 7" class="contestant-image">
+            <h3>Terluka Abigail</h3>
+            <p>ID: 031</p>
+            <button class="vote-button" onclick="showVote(2)">Vote</button>
+        </div>
+        <div class="contestant-card" id="contestant-3">
+            <img src="images/contestant 32.jpg" alt="Contestant 7" class="contestant-image">
+            <h3>Omolasoye Merit</h3>
+            <p>ID: 032</p>
+            <button class="vote-button" onclick="showVote(2)">Vote</button>
+        </div>
+        <div class="contestant-card" id="contestant-3">
+            <img src="images/contestant 33.jpg" alt="Contestant 7" class="contestant-image">
+            <h3>Contestant 33</h3>
+            <p>ID: 033</p>
+            <button class="vote-button" onclick="showVote(2)">Vote</button>
+        </div>
+        <div class="contestant-card" id="contestant-3">
+            <img src="images/contestant 34.jpg" alt="Contestant 7" class="contestant-image">
+            <h3>Ibekwe Raphael</h3>
+            <p>ID: 034</p>
+            <button class="vote-button" onclick="showVote(2)">Vote</button>
+        </div>
+        <div class="contestant-card" id="contestant-3">
+            <img src="images/contestant 35.jpg" alt="Contestant 7" class="contestant-image">
+            <h3>Victoria Nathaniel</h3>
+            <p>ID: 035</p>
+            <button class="vote-button" onclick="showVote(2)">Vote</button>
+        </div>
+        <div class="contestant-card" id="contestant-3">
+            <img src="images/contestant 36.jpg" alt="Contestant 7" class="contestant-image">
+            <h3>Emmanuella Eze</h3>
+            <p>ID: 036</p>
+            <button class="vote-button" onclick="showVote(2)">Vote</button>
+        </div>
+        <div class="contestant-card" id="contestant-3">
+            <img src="images/contestant 37.jpg" alt="Contestant 7" class="contestant-image">
+            <h3>Odeh John</h3>
+            <p>ID: 037</p>
+            <button class="vote-button" onclick="showVote(2)">Vote</button>
+        </div>
+        <div class="contestant-card" id="contestant-3">
+            <img src="images/contestant 38.jpg" alt="Contestant 7" class="contestant-image">
+            <h3>Kakwa Rose</h3>
+            <p>ID: 038</p>
+            <button class="vote-button" onclick="showVote(2)">Vote</button>
+        </div>
+        <div class="contestant-card" id="contestant-3">
+            <img src="images/contestant 39.jpg" alt="Contestant 7" class="contestant-image">
+            <h3>Great Osekhenmen</h3>
+            <p>ID: 039</p>
+            <button class="vote-button" onclick="showVote(2)">Vote</button>
+        </div>
+        <div class="contestant-card" id="contestant-3">
+            <img src="images/contestant 40.jpg" alt="Contestant 7" class="contestant-image">
+            <h3>Kosisochukwu Christiana</h3>
+            <p>ID: 040</p>
+            <button class="vote-button" onclick="showVote(2)">Vote</button>
+        </div>
+        <div class="contestant-card" id="contestant-3">
+            <img src="images/contestant 41.jpg" alt="Contestant 7" class="contestant-image">
+            <h3>Chiemeke Emmanuella</h3>
+            <p>ID: 041</p>
+            <button class="vote-button" onclick="showVote(2)">Vote</button>
+        </div>
+        <div class="contestant-card" id="contestant-3">
+            <img src="images/contestant 42.jpg" alt="Contestant 7" class="contestant-image">
+            <h3>Precious Abel</h3>
+            <p>ID: 042</p>
+            <button class="vote-button" onclick="showVote(2)">Vote</button>
+        </div>
+        <div class="contestant-card" id="contestant-3">
+            <img src="images/contestant 43.jpg" alt="Contestant 7" class="contestant-image">
+            <h3>Glory Friday</h3>
+            <p>ID: 043</p>
+            <button class="vote-button" onclick="showVote(2)">Vote</button>
+        </div>
+        <div class="contestant-card" id="contestant-3">
+            <img src="images/contestant 44.jpg" alt="Contestant 7" class="contestant-image">
+            <h3>Deborah Shashere</h3>
+            <p>ID: 044</p>
+            <button class="vote-button" onclick="showVote(2)">Vote</button>
+        </div>
+        <div class="contestant-card" id="contestant-3">
+            <img src="images/contestant 45.jpg" alt="Contestant 7" class="contestant-image">
+            <h3>Ifunanyachukwu Patience</h3>
+            <p>ID: 045</p>
+            <button class="vote-button" onclick="showVote(2)">Vote</button>
+        </div>
+        <div class="contestant-card" id="contestant-3">
+            <img src="images/contestant 46.jpg" alt="Contestant 7" class="contestant-image">
+            <h3>Akintayo Rebecca</h3>
+            <p>ID: 046</p>
+            <button class="vote-button" onclick="showVote(2)">Vote</button>
+        </div>
+        <div class="contestant-card" id="contestant-3">
+            <img src="images/contestant 47.jpg" alt="Contestant 7" class="contestant-image">
+            <h3>Sewodu Victoria</h3>
+            <p>ID: 047</p>
+            <button class="vote-button" onclick="showVote(2)">Vote</button>
+        </div>
+        <div class="contestant-card" id="contestant-3">
+            <img src="images/contestant 48.jpg" alt="Contestant 7" class="contestant-image">
+            <h3>Chinedu Eric</h3>
+            <p>ID: 048</p>
+            <button class="vote-button" onclick="showVote(2)">Vote</button>
+        </div>
+        <div class="contestant-card" id="contestant-3">
+            <img src="images/contestant 49.jpg" alt="Contestant 7" class="contestant-image">
+            <h3>Umekwe Donatus</h3>
+            <p>ID: 049</p>
+            <button class="vote-button" onclick="showVote(2)">Vote</button>
+        </div>
+        <div class="contestant-card" id="contestant-3">
+            <img src="images/contestant 50.jpg" alt="Contestant 7" class="contestant-image">
+            <h3>Benita Bamidele</h3>
+            <p>ID: 050</p>
+            <button class="vote-button" onclick="showVote(2)">Vote</button>
+        </div>
+        <div class="contestant-card" id="contestant-3">
+            <img src="images/contestant 51.jpg" alt="Contestant 7" class="contestant-image">
+            <h3>Gift Ekene</h3>
+            <p>ID: 051</p>
+            <button class="vote-button" onclick="showVote(2)">Vote</button>
+        </div>
+        <div class="contestant-card" id="contestant-3">
+            <img src="images/contestant 52.jpg" alt="Contestant 7" class="contestant-image">
+            <h3>Convenant Abel</h3>
+            <p>ID: 052</p>
+            <button class="vote-button" onclick="showVote(2)">Vote</button>
+        </div>
+        <div class="contestant-card" id="contestant-3">
+            <img src="images/contestant 53.jpg" alt="Contestant 7" class="contestant-image">
+            <h3>Samuel Patrick</h3>
+            <p>ID: 053</p>
+            <button class="vote-button" onclick="showVote(2)">Vote</button>
+        </div>
+        <div class="contestant-card" id="contestant-3">
+            <img src="images/contestant 54.jpg" alt="Contestant 7" class="contestant-image">
+            <h3>Akinwale Oluwatomiwa</h3>
+            <p>ID: 054</p>
+            <button class="vote-button" onclick="showVote(2)">Vote</button>
+        </div>
+        <div class="contestant-card" id="contestant-3">
+            <img src="images/contestant 55.jpg" alt="Contestant 7" class="contestant-image">
+            <h3>Jennifer Chinaza</h3>
+            <p>ID: 055</p>
+            <button class="vote-button" onclick="showVote(2)">Vote</button>
+        </div>
+        <div class="contestant-card" id="contestant-3">
+            <img src="images/contestant 56.jpg" alt="Contestant 7" class="contestant-image">
+            <h3>Elizabeth Shyngle</h3>
+            <p>ID: 056</p>
+            <button class="vote-button" onclick="showVote(2)">Vote</button>
+        </div>
+        <div class="contestant-card" id="contestant-3">
+            <img src="images/contestant 57.jpg" alt="Contestant 7" class="contestant-image">
+            <h3>Happiness Abidoye</h3>
+            <p>ID: 057</p>
+            <button class="vote-button" onclick="showVote(2)">Vote</button>
+        </div>
+        <div class="contestant-card" id="contestant-3">
+            <img src="images/contestant 58.jpg" alt="Contestant 7" class="contestant-image">
+            <h3></h3>
+            <p>ID: 058</p>
+            <button class="vote-button" onclick="showVote(2)">Vote</button>
+        </div>
+        <div class="contestant-card" id="contestant-3">
+            <img src="images/contestant 59.jpg" alt="Contestant 7" class="contestant-image">
+            <h3>Amos Donald</h3>
+            <p>ID: 059</p>
+            <button class="vote-button" onclick="showVote(2)">Vote</button>
+        </div>
+      
+    </div>
+</body>
+</html>
