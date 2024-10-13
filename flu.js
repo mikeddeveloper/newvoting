@@ -1,30 +1,21 @@
-document.getElementById('payButton').addEventListener('click', function() {
-    const email = document.getElementById('customerEmail').value;
-    const amount = document.getElementById('paymentAmount').value;
+document.getElementById("paymentForm").addEventListener("submit", function(e) {
+    e.preventDefault();
 
-    if (!email) {
-        alert("Email is required to proceed with payment.");
-        return;
-    }
+    const email = document.getElementById("email").value;
+    const amount = document.getElementById("amount").value * 100; // Convert to kobo
 
-    if (!amount || amount < 100) {
-        alert("Please enter a valid amount (minimum is ₦100).");
-        return;
-    }
-
+    // Initialize Paystack
     const handler = PaystackPop.setup({
-        key: "pk_live_d6a3fb58d7d73bd42f0e9b5c74f28cafc35dbe62", // Replace with your actual Paystack public key
-        email: email, // Customer's email
-        amount: amount * 100, // Convert amount to kobo
-        currency: "NGN", // Currency
-        callback: function(response) {
-            // Handle successful payment
-            alert("Payment successful! Reference: " + response.reference);
-            // You can redirect or show a success message
-        },
+        key:  "pk_live_d6a3fb58d7d73bd42f0e9b5c74f28cafc35dbe62", // Replace with your Paystack public key
+        email: email,
+        amount: amount,
+        currency: "NGN",
         onClose: function() {
-            // Handle payment window close
-            alert('Payment window closed.');
+            alert('Transaction was not completed, window closed.');
+        },
+        callback: function(response) {
+            alert('Payment successful! Transaction reference: ' + response.reference);
+            // Optionally, send the transaction reference to your server for verification
         }
     });
 

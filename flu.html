@@ -5,17 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Voting Competition Payment</title>
     <link rel="stylesheet" href="flu.css">
-    <script src="https://js.paystack.co/v1/inline.js"></script>
 </head>
 <body>
     <div class="container">
-        <h1>Voting Competition</h1>
-        <p>Vote for your favorite candidate! Please enter the amount you wish to pay to cast your vote.</p>
-        <input type="email" id="customerEmail" placeholder="Enter your email" required />
-        <input type="number" id="paymentAmount" placeholder="Enter amount (in NGN)" required min="100" />
-        <button id="payButton">Pay Now to Vote</button>
+        <h1>Vote for Your Favorite Contestant</h1>
+        <form id="paymentForm">
+            <input type="text" id="email" placeholder="Your Email" required>
+            <input type="number" id="amount" placeholder="Amount (in Naira)" required>
+            <button type="submit">Pay Now</button>
+        </form>
     </div>
 
+    <script src="https://js.paystack.co/v1/inline.js"></script>
     <script src="flu.js"></script>
 </body>
 </html>
