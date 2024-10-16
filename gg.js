@@ -6,7 +6,7 @@ document.getElementById("paymentForm").addEventListener("submit", function(e) {
 
     // Initialize Paystack
     const handler = PaystackPop.setup({
-        key:  "pk_live_d6a3fb58d7d73bd42f0e9b5c74f28cafc35dbe62", // Replace with your Paystack public key
+        key:  "pk_live_d6a3fb58d7d73bd42f0e9b5c74f28cafc35dbe62()()", // Replace with your Paystack public key
         email: email,
         amount: amount,
         currency: "NGN",
